@@ -420,7 +420,7 @@ ul.row {
 }
 
 .header {
-	padding: var(--button-padding);
+	padding: var(--header-padding);
 }
 
 .header-logo {
