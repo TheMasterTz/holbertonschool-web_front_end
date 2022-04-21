@@ -1,0 +1,5 @@
+@for $iter from 1 through 4 {
+	.col-#{$iter} {
+		width: 100% / $iter;
+	}
+}
