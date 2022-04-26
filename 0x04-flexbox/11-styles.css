@@ -169,8 +169,20 @@ a:active {
     white-space: nowrap;
 }
 
+/*** 2. LAYOUT ***/
+
+/* Layout
+      ============================= */
+
+.container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Grid
       ============================= */
+
 
 .row {
     display: flex;
@@ -197,16 +209,17 @@ ul.row {
 /* Navbar
       ============================= */
 
-.navbar-menu {
-    float: right;
-}
 
 .nav {
+    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: center;
-    display: flex;
+}
+
+.nav .nav-item+.nav-item {
+    margin: var(--nav-item-margin);
 }
 
 .nav .nav-item {
@@ -243,13 +256,8 @@ ul.row {
     width: 100%;
 }
 
-.nav .nav-item+.nav-item {
-    margin: var(--nav-item-margin);
-}
-
 /* Header
       ============================= */
-
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -260,8 +268,9 @@ ul.row {
     padding: var(--header-padding);
     position: relative;
     z-index: 3;
-    background: transparent !important;
+    background: transparent;
 }
+
 
 /* Footer
       ============================= */
@@ -347,6 +356,13 @@ ul.row {
       ============================= */
 
 .section-hero {
+    background-position: 75% 0;
+    background-repeat: no-repeat;
+    background-size: 90rem auto;
+    background-color: #010101;
+}
+
+.hero-homepage {
     position: relative;
     margin-top: -8.5rem;
 }
@@ -358,13 +374,6 @@ ul.row {
 .section-hero .section-category {
     color: var(--color-white);
     text-transform: uppercase;
-}
-
-.hero-homepage {
-    background-position: 75% 0;
-    background-repeat: no-repeat;
-    background-size: 90rem auto;
-    background-color: #010101;
 }
 
 .section-hero .section-title {
@@ -379,25 +388,22 @@ ul.row {
     min-height: 50vh;
 }
 
-/* Section Latest news =============================*/
-
-.section-blog .row {
+/* Section Latest news ============================= */
+.section-latest-news .row {
     flex-direction: row-reverse;
 }
 
-/*** 4. CARD ***/
-
 /* Section SERVICES ============================= */
-
 .section-services .row {
     flex-wrap: wrap;
 }
 
-/* Section ABOUT US ============================= */
-
-.section-about-us [class*='col-'] {
+/* Section ABOT US ============================= */
+.about-us [class*='col-'] {
     align-self: center;
 }
+
+/*** 4. CARD ***/
 
 /* Card (all styles)
       ============================= */
@@ -530,29 +536,29 @@ ul.row {
     ============================= */
 
 .hero-article {
-	background-size: 150rem 100rem;
-	background-position: 50% 0;
+    background-size: 150rem 100rem;
+    background-position: 50% 0;
 }
 
 .hero-article::before {
-	content: "";
-	background: rgba(0, 0, 0, 0.8);
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	z-index: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
 }
 
 .hero-article .section-inner {
-	text-align: center;
-	align-items: center;
-	min-height: 40vh;
+    text-align: center;
+    align-items: center;
+    min-height: 40vh;
 }
 
 .hero-article .section-body {
-	position: relative;
-	padding: 7rem 0 0;
-	z-index: 2;
+    position: relative;
+    padding: 7rem 0 0;
+    z-index: 2;
 }
