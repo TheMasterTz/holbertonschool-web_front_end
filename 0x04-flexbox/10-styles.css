@@ -202,7 +202,7 @@ ul.row {
     padding: 0;
     list-style: none;
     text-align: center;
-	display: flex;
+    display: flex;
 }
 
 .nav .nav-item {
@@ -212,8 +212,8 @@ ul.row {
     letter-spacing: var(--nav-item-letter-spacing);
 }
 
-.nav .nav-item + .nav-item {
-	margin: var(--nav-item-margin);
+.nav .nav-item+.nav-item {
+    margin: var(--nav-item-margin);
 }
 
 .nav .nav-link {
@@ -249,7 +249,7 @@ ul.row {
 .header-container {
     display: flex;
     justify-content: space-between;
-	align-items: center;
+    align-items: center;
 }
 
 .header {
@@ -351,7 +351,7 @@ ul.row {
     padding: 10rem 4rem;
 }
 
-.section-category .section-hero {
+.section-hero .section-category {
     color: var(--color-white);
     text-transform: uppercase;
 }
@@ -369,10 +369,10 @@ ul.row {
 
 .section-hero .section-inner {
     display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	min-height: 50vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 50vh;
 }
 
 /* Section Latest news =============================*/
@@ -391,7 +391,7 @@ ul.row {
 
 /* Section ABOUT US ============================= */
 .section-about-us [class*='col-'] {
-	align-self: center;
+    align-self: center;
 }
 
 /* Card (all styles)
