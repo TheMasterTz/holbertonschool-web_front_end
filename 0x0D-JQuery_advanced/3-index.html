@@ -15,7 +15,7 @@
       function createFamilyTree() {
         const [th, tr, td] = ["<th>", "<tr>", "<td>"]
 
-        $('body').append("<table>")
+        $('body').append("<table>").find('table')
           .append(tr)
           .append(tr)
           .append(tr)
@@ -40,7 +40,6 @@
           .eq(3)
             .append(td).find("td").first().text("Antoine").end().end()
             .append(td).find("td").last().text("Salva").end().end()
-          end();
       }
 
       createFamilyTree();
