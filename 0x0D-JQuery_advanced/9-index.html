@@ -57,15 +57,16 @@
           sroffset: offset
         }
 
-        $("ul").first().html("");
         Object.keys(params).forEach((key) => {
           url += "&" + key + "=" + params[key];
         });
+
         displayLoading(true);
         $.get(url, (data) => {
           displayLoading(false);
           buildPagination(data.query.searchinfo.totalhits, data.continue.sroffset, offset);
-          data.query.search.forEach(item => {
+          $("ul").first().html("");
+          data.query.search.forEach((item) => {
             addNewArticle(item.pageid, item.title, item.snippet);
           })
         })
@@ -89,12 +90,12 @@
       }
 
       function displayLoading(loading) {
-        let firstUl = $('ul').first();
+        let firtUl = $("ul").first();
 
-        if(loading === true) {
-          firstUl.wrap("<div class='loading'></div>");
+        if (loading === true) {
+          firtUl.wrap("<div class='loading'></div>");
         } else {
-          firstUl.unwrap();
+          firtUl.unwrap();
         }
       }
 
